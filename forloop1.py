@@ -36,3 +36,11 @@ for f in friends2.values():
 # ຕ້ອງການລຳດັບ
 for i, f in enumerate(friends, start=1000):
     print(i, f)
+
+# ຕ້ອງການລຳດັບສຳຫຼັບ Dictionary
+for i, f in enumerate(friends2.items()):
+    print(i, f)
+
+# ຕ້ອງການລຳດັບສຳຫຼັບ Dictionary ແຍກ keys
+for i, (k, v) in enumerate(friends2.items()):
+    print(i, k, v)
