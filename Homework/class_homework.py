@@ -33,43 +33,43 @@
 
 
 class Employee:
-    minSalary = 2800000
-    maxSalary = 4000000
-    _companyName = "Anitocorn"
+	minSalary = 2800000
+	maxSalary = 4000000
+	_companyName = "Anitocorn"
 
-    def __init__(self, name, salary, department):
-        self.name = name
-        self.salary = salary
-        self.department = department
+	def __init__(self, name, salary, department):
+		self.name = name
+		self.salary = salary
+		self.department = department
 
-    def _showData(self):
-        print("ຊື່ພະນັກງານ = {}".format(self.name))
-        print("ເງິນເດືອນ = {0:,.2f}".format(self.salary))
-        print("ຕຳແໜ່ງ = {}".format(self.department))
+	def _showData(self):
+		print("ຊື່ພະນັກງານ = {}".format(self.name))
+		print("ເງິນເດືອນ = {0:,.2f}".format(self.salary))
+		print("ຕຳແໜ່ງ = {}".format(self.department))
 
-    def _getIncome(self):
-        return self.salary * 12
+	def _getIncome(self):
+		return self.salary * 12
 
-    def __str__(self):
-        return ("ຊື່ພະນັກງານ = {} , ເງິນເດືອນ = {} , ຕຳແໜ່ງ = {}".format(self.name, self.salary, self.department))
+	def __str__(self):
+		return ("ຊື່ພະນັກງານ = {} , ເງິນເດືອນ = {} , ຕຳແໜ່ງ = {}".format(self.name, self.salary, self.department))
 
 
 class Accounting(Employee):
-    __departmentName = "ພະແນກບັນຊີ"
+	__departmentName = "ພະແນກບັນຊີ"
 
-    def __init__(self, name, salary):
-        super().__init__(name, salary, self.__departmentName)
+	def __init__(self, name, salary):
+		super().__init__(name, salary, self.__departmentName)
 
 
 class Programmer(Employee):
-    __departmentName = "ໂປຣແກຣມເມີຣ໌"
+	__departmentName = "ໂປຣແກຣມເມີຣ໌"
 
-    def __init__(self, name, salary, experience):
-        super().__init__(name, salary, self.__departmentName)
-        self.exp = experience
+	def __init__(self, name, salary, experience):
+		super().__init__(name, salary, self.__departmentName)
+		self.exp = experience
 
-    def __str__(self):
-        return (super().__str__()+" , ປະສົບການເຮັດວຽກ = {} ປີ".format(self.exp))
+	def __str__(self):
+		return (super().__str__()+" , ປະສົບການເຮັດວຽກ = {} ປີ".format(self.exp))
 
 
 programmer = Programmer("James", 4000000, 2)
