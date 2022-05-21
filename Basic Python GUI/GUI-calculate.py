@@ -8,7 +8,7 @@ GUI.title('Program shipping cost')
 GUI.geometry('600x550')
 
 
-bg = PhotoImage(file='phenomenal_logistic_icon.png')
+bg = PhotoImage(file='')
 
 BG = Label(GUI, image=bg)
 BG.pack(pady=5)
