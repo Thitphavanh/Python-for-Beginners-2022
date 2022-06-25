@@ -1,0 +1,41 @@
+{% extends 'myapp/base.html' %} {% block content %}
+
+<div class="container mt-3">
+  <h2>ຕິດຕໍ່ສອບຖາມ</h2>
+  <form action="POST">
+    {% csrf_token %}
+    <div class="form-group mt-3">
+      <label for="email">ອີເມລ໌ :</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="ອີເມລ໌"
+        name="email"
+      />
+    </div>
+    <div class="form-group mt-3">
+      <label for="pwd">ຫົວຂໍ້ :</label>
+      <input
+        type="password"
+        class="form-control"
+        id="pwd"
+        placeholder="ຫົວຂໍ້"
+        name="pswd"
+      />
+    </div>
+    <div class="form-group mt-3">
+      <label for="comment">ລາຍລະອຽດ :</label>
+      <textarea
+        class="form-control"
+        rows="5"
+        id="comment"
+        name="text"
+      ></textarea>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">ຍືນຍັນ</button>
+  </form>
+</div>
+
+{% endblock content %}
