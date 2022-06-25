@@ -1,7 +1,39 @@
 {% extends 'myapp/base.html' %} {% block content %}
 <main>
+	{% for pd in products %}
 	<div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-		<h2 class="my-0 fw-normal">Phenomenal Bottega</h2>
+		{% for p in pd %}
+		
+		<div class="col">
+			<div class="card mb-4 rounded-3 shadow-sm">
+				<div class="card-header py-3">
+					<h4 class="my-0 fw-normal">{{ p.name }}</h4>
+				</div>
+				<div class="card-body">
+					<h2 class="card-title pricing-card-title">
+						{{ p.price }}<small class="text-muted fw-light"></small>
+					</h2>
+					<ul class="list-unstyled mt-3 mb-4">
+
+					</ul>
+					<button type="button" class="w-100 btn btn-lg btn-primary">
+						ສັ່ງຊື້ 
+					</button>
+				</div>
+			</div>
+		
+		
+	</div>
+
+		
+{% endfor %}
+	</div>
+	{% endfor %}
+</main>
+<h2 class="display-6 text-center mb-4">ALL PRODUCTS</h2>
+<div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+
+<h2 class="my-0 fw-normal">Phenomenal Bottega</h2>
 		<h2 class="my-0 fw-normal">Phenomenal BookCloud</h2>
 		<h2 class="my-0 fw-normal">Phenomenal Logistic</h2>
 		
@@ -19,34 +51,6 @@
 			<li>ຂົນສົ່ງລາວ - ຈີນ ແລະ ໄທ</li>
 			<li>ເລີ່ມເປີດໂຕ ໃນປີ 2021</li>
 		</ul>
-	</div>
-
-	<h2 class="display-6 text-center mb-4">ALL PRODUCTS</h2>
-
-	<div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-		<div class="col">
-			<div class="card mb-4 rounded-3 shadow-sm">
-				<div class="card-header py-3">
-					<h4 class="my-0 fw-normal">Phenomenal Bottega</h4>
-				</div>
-				<div class="card-body">
-					<h2 class="card-title pricing-card-title">
-						MarketPlace<small class="text-muted fw-light"></small>
-					</h2>
-					<ul class="list-unstyled mt-3 mb-4">
-						<li>ຂາຍສິນຄ້າອອນໄລນ໌</li>
-						<li>ເລີ່ມເປີດໂຕ ໃນປີ 2018</li>
-						<li>ເລີ່ມເປີດໂຕ ໃນປີ 2018</li>
-					</ul>
-					<button type="button" class="w-100 btn btn-lg btn-primary">
-						Click !
-					</button>
-				</div>
-			</div>
-		</div>
-		
-
-	</div>
-</main>
 
 {% endblock content %}
+
