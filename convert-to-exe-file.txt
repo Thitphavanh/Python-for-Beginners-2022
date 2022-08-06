@@ -1,0 +1,1 @@
+pyinstaller --noconsole -i Car.ico --onefile GUI-calculate.py
