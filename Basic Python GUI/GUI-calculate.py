@@ -4,7 +4,7 @@ from tkinter import *
 from tkinter import ttk, messagebox
 
 GUI = Tk()
-GUI.title('Program shipping cost')
+GUI.title('Program charge bettery')
 GUI.geometry('600x550')
 
 
@@ -13,7 +13,7 @@ bg = PhotoImage(file='1.gif')
 BG = Label(GUI, image=bg)
 BG.pack(pady=5)
 
-label = Label(GUI, text='Please entry kilo (Kg) in this field',
+label = Label(GUI, text='Please entry minute in this field',
               font=(None, 18))
 label.pack(pady=5)
 
@@ -25,7 +25,7 @@ Entry1.pack(pady=5)
 def Calculate():
     try:
         quantity = float(v_quantity.get())
-        calculate = quantity * 15000
+        calculate = quantity * 1500
         messagebox.showinfo(
             'Total value', 'Total value {} LAK'.format(calculate))
         v_quantity.set('')
