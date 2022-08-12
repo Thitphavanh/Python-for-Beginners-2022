@@ -19,7 +19,16 @@ wikipedia.set_lang('en')
 # apple =  article('Tesla')
 # write('tesla.txt',tesla)
 
-words_company = ['Tesla Inc', 'Apple Inc', 'Google Inc', 'Microsoft Inc']
+# words_company = ['Tesla Inc', 'Apple Inc', 'Google Inc', 'Microsoft Inc']
+with open('search-word.txt','r', encoding='utf-8') as file:
+    lines = file.readlines()
+    
+words_company = []
+for l in lines:
+    words_company.append(l.strip())
+    
+print(words_company)
+
 
 for w in words_company:
     try:
